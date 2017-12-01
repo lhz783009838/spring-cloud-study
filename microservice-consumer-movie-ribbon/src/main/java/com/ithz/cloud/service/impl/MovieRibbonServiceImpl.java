@@ -19,6 +19,6 @@ public class MovieRibbonServiceImpl implements MovieRibbonService {
     @Override
     public User getUserById(Long id) {
         //todo !!!! 请求地址为要调用的服务名 不是地址
-        return restTemplate.getForObject("http://microsevice-provider-user/user/get/1",User.class);
+        return restTemplate.getForObject("http://microsevice-provider-user/user/get/"+id,User.class);
     }
 }

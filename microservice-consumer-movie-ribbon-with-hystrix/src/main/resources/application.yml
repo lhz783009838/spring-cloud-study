@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: microservice-consumer-movie-ribbon-with-hystrix
+
+server:
+  port: 1117
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:1111/eureka/,http://peer2:1112/eureka/
+
+
