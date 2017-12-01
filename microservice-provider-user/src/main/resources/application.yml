@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: microsevice-provider-user
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:
+    platform: h2
+    schema: classpath:schema.sql
+    data: classpath:data.sql
+
+logging:
+  level:
+    root: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+
+server:
+  port: 1113
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:1111/eureka/,http://peer2:1112/eureka/
+  instance:
+    preferIpAddress: true
+

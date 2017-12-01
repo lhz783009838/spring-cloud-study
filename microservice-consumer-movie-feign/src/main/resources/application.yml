@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: microservice-consumer-movie-feign
+server:
+  port: 1116
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone:  http://peer1:1111/eureka/,http://peer2:1112/eureka/
