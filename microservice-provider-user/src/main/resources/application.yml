@@ -24,6 +24,9 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://peer1:1111/eureka/,http://peer2:1112/eureka/
+    #healthcheck: # 开启健康检查
+      #enabled: true
   instance:
     preferIpAddress: true
-
+    #lease-expiration-duration-in-seconds: 30 # 续约到期时间
+    #lease-renewal-interval-in-seconds: 10 #续约更新时间

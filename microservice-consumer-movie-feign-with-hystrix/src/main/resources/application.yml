@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: microservice-consumer-movie-feign-with-hystrix
+server:
+  port: 1118
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:1111/eureka/,http://peer2:1112/eureka/
+#ribbon:
+#  eureka:
+#    enabled: true

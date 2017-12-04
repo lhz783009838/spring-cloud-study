@@ -15,3 +15,6 @@ eureka:
     registerWithEureka: true
     serviceUrl:
       defaultZone: http://peer1:1111/eureka/
+  #server:
+    #enable-self-preservation: false
+    #eviction-interval-timer-in-ms: 4000
